@@ -54,15 +54,14 @@ header {
     align-items: center;
     text-align: center;
     transition: 400ms ease-in-out;
-    border-radius: 25px;
+    border-bottom: 2px solid white;
 
 }
 
 .text-header:hover {
     transition: 400ms ease-in-out;
-    transform: translateY(5px);
-
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.479);
+    transform: translateY(10px);
+    border-bottom: 2px solid black;
 
 }
 
@@ -79,18 +78,31 @@ header {
 
 .img {
     height: 4vh;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.img:hover {
+    transition: 200ms ease-in-out;
+    transform: scale(1.25) translateY(4px);
 }
 
 .img-logo {
     width: 80px;
     cursor: pointer;
     height: 50px;
+    transition: 200ms ease-in-out;
+}
+
+.img-logo:hover {
+    transition: 200ms ease-in-out;
+    transform: scale(1.25) translateY(4px) translateX(4px);
 }
 
 .busca {
-    height: 3vh;
+    height: 30px;
     width: 120px;
-    border-radius: 20px;
+    border-radius: 30px;
     border: 1px solid rgb(0, 0, 0);
     padding: 10px;
     padding-inline: 18px;
@@ -98,12 +110,18 @@ header {
     background-position: 120px;
     background-size: 25px;
     background-repeat: no-repeat;
+    transition: 200ms ease-in-out;
 
 }
 
 .busca:focus {
-    border: 1px solid rgb(0, 0, 0);
+    transition: 200ms ease-in-out;
+
     outline: none;
+    width: 240px;
+    background-position: 240px;
+    box-shadow: rgba(38, 57, 77, 0.24) 0px 20px 30px -10px;
+
 }
 
 section {
@@ -356,6 +374,16 @@ section p {
     transition: 500ms ease-in-out;
 }
 
+#radio1ac:checked~.slidefirts-ac {
+    margin-left: 5%;
+    transition: 500ms ease-in-out;
+}
+
+#radio2ac:checked~.slidefirts-ac {
+    margin-left: -95%;
+    transition: 500ms ease-in-out;
+}
+
 
 
 .btn-t-div {
@@ -365,14 +393,15 @@ section p {
     height: 40vh;
     z-index: +1;
     width: 60vw;
-    margin-left: 10px;
-    gap: 850px;
+    margin-left: 5px;
+    gap: 860px;
     position: absolute;
 }
 
 .btn-t {
 
     height: 40px;
+    width: 40px;
     background-color: transparent;
     font-size: 50px;
     justify-content: center;
@@ -398,6 +427,7 @@ section p {
     border-radius: 10px;
     cursor: pointer;
 
+
 }
 
 .navigation-auto-tenis div {
@@ -407,6 +437,10 @@ section p {
     cursor: pointer;
 
 
+}
+
+.sktSecImg img {
+    cursor: pointer;
 }
 
 .navigation-auto-r div {
@@ -419,6 +453,13 @@ section p {
 }
 
 .navigation-auto-tenisd div {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.navigation-auto-acessorios div {
     border: 2px solid black;
     padding: 5px;
     border-radius: 10px;
@@ -454,6 +495,15 @@ section p {
 }
 
 .navigation-auto-tenisd {
+    position: absolute;
+    width: 45vw;
+    margin-top: 500px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.navigation-auto-acessorios {
     position: absolute;
     width: 45vw;
     margin-top: 500px;
@@ -528,6 +578,23 @@ section p {
     border: 2px solid black;
     z-index: +1;
 }
+
+#radio1ac:checked~.navigation-auto-acessorios .auto-btn1ac {
+    transition: 500ms ease-in-out;
+    transform: scale(1.25);
+    background-color: rgb(44, 33, 255);
+    border: 2px solid black;
+    z-index: +1;
+}
+
+#radio2ac:checked~.navigation-auto-acessorios .auto-btn2ac {
+    transition: 500ms ease-in-out;
+    transform: scale(1.25);
+    background-color: rgb(44, 33, 255);
+    border: 2px solid black;
+    z-index: +1;
+}
+
 
 #radio1td:checked~.navigation-auto-tenisd .auto-btn1td {
     transition: 500ms ease-in-out;
@@ -700,6 +767,13 @@ section p {
     z-index: +1;
 }
 
+.slidefirts-ac {
+    margin-left: 40px;
+    transition: 500ms ease-in-out;
+    padding: 10px;
+    z-index: +1;
+}
+
 .slidetwo-tenis {
     margin-left: 40px;
     transition: 500ms ease-in-out;
@@ -708,6 +782,12 @@ section p {
 }
 
 .slidefirts-tenis:hover {
+    transition: 500ms ease-in-out;
+    z-index: +1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.slidefirts-ac:hover {
     transition: 500ms ease-in-out;
     z-index: +1;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -768,4 +848,179 @@ section p {
     transition: 500ms ease-in-out;
     z-index: +1;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+footer {
+    height: 570px;
+    width: 100%;
+    padding-block: 40px;
+    display: flex;
+    background-color: #0071ce;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+footer h1 {
+    font-size: 18px;
+    line-height: 24px;
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    color: white;
+    font-weight: 600;
+}
+
+.footer-input-div {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 70vw;
+}
+
+footer input {
+    width: 30vw;
+    height: 40px;
+    background-color: #0071ce;
+    border: none;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+footer input:focus {
+    border-bottom: 1px solid white;
+    outline: none;
+}
+
+footer input::placeholder {
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+footer button {
+    width: 12vw;
+    height: 40px;
+    background-color: white;
+    border: none;
+    color: #0071ce;
+}
+
+.info-div {
+
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 300px;
+}
+
+.duvida {
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.duvida h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.duvida div {
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 20px;
+}
+
+footer p {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+
+footer p:hover {
+    transition: 200ms ease-in-out;
+    transform: translateX(5px);
+}
+
+.faleConosco {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 30px;
+}
+
+.faleConosco h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.fale {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faleContent {
+    display: flex;
+    height: 40px;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.faleContent div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.info-div img {
+    height: 30px;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+
+.info-div img:hover {
+    transition: 200ms ease-in-out;
+    transform: scale(1.2) translateY(4px);
+
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 80px;
+    gap: 10px;
+
+}
+
+.payment h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    color: white;
+}
+
+.payment img {
+    height: 30px;
+}
+
+.espaco {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.459);
+
 }

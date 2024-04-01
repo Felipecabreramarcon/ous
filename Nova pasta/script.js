@@ -77,3 +77,24 @@ function backImageRoupas() {
 
     document.getElementById('radio' + contarParaRoupas + 'r').checked = true;
 }
+
+let contarParaAcessorios = 1;
+function nextImageAc() {
+
+    contarParaAcessorios++;
+    if (contarParaAcessorios > 3) {
+        contarParaAcessorios = 1;
+    }
+
+    document.getElementById('radio' + contarParaAcessorios + 'ac').checked = true;
+}
+
+function backImageAc() {
+
+    contarParaAcessorios--;
+    if (contarParaAcessorios < 1) {
+        contarParaAcessorios = 3;
+    }
+
+    document.getElementById('radio' + contarParaAcessorios + 'ac').checked = true;
+}
